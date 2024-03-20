@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Header from './Header';
 import { checkValidate } from '../utils/validate';
+import { BG_IMG } from '../utils/constants';
 
 const Login = () => {
     const [signForm, setSignForm] = useState(true);
@@ -19,7 +20,7 @@ const Login = () => {
     return (
         <div className='min-h-screen'>
             <div className='absolute bg-cover bg-center -z-10 bg-blue-400'>
-                <img src='https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_small.jpg' />
+                <img src={BG_IMG} />
             </div>
             <Header />
             <form onSubmit={e => e.preventDefault()} className='bg-black p-12 w-3/12 mx-auto my-20 text-white rounded-lg bg-opacity-70'>
